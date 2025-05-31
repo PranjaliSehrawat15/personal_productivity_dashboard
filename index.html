@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Productivity Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="dashboard">
+ <!-- clock -->
+    <div class="clock-section">
+      <div class="clock">
+        <div style="--clr: #ff3d58; --h: 50px" id="hour" class="hand"><i></i></div>
+        <div style="--clr: #00a6ff; --h: 70px" id="min" class="hand"><i></i></div>
+        <div style="--clr: #ffffff; --h: 80px" id="sec" class="hand"><i></i></div>
+        <span style="--i: 1"><b>1</b></span>
+        <span style="--i: 2"><b>2</b></span>
+        <span style="--i: 3"><b>3</b></span>
+        <span style="--i: 4"><b>4</b></span>
+        <span style="--i: 5"><b>5</b></span>
+        <span style="--i: 6"><b>6</b></span>
+        <span style="--i: 7"><b>7</b></span>
+        <span style="--i: 8"><b>8</b></span>
+        <span style="--i: 9"><b>9</b></span>
+        <span style="--i: 10"><b>10</b></span>
+        <span style="--i: 11"><b>11</b></span>
+        <span style="--i: 12"><b>12</b></span>
+      </div>
+      <div id="digital-time" class="digital-time"></div>
+    </div>
+
+    <!-- weather-->
+    <div class="weather-section">
+      <div class="weather" id="weather">Loading weather...</div>
+    </div>
+    <!-- quotes -->
+    <div class="quote-section">
+      <div class="quote" id="quote">🔄 Loading quote...</div>
+      <button onclick="fetchQuote()" class="refresh-btn">🔁 New Quote</button>
+    </div>
+    
+
+    <!-- Tasks -->
+    <div class="task-section">
+      <h2>Tasks</h2>
+      <div class="task-input">
+        <input type="text" id="task-desc" placeholder="Enter a task" />
+        <button onclick="addTask()">Add</button>
+      </div>
+      <ul id="task-list"></ul>
+    </div>
+
+    <!-- Pomodoro -->
+    <div class="timer-section">
+      <h2>Pomodoro Timer</h2>
+      <div id="timer">25:00</div>
+      <button onclick="startTimer()">Start</button>
+      <button onclick="resetTimer()">Reset</button>
+    </div>
+    <!-- links -->
+    <div class="circle-links-section">
+      <h2>🚀 Quick Access</h2>
+   
+      <div class="circle-container">
+        <a href="https://open.spotify.com" target="_blank"title="Spotify" >
+          <i class="fab fa-spotify"></i>
+        </a>
+        <a href="https://www.youtube.com" target="_blank"title="YouTube" >
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://github.com/PranjaliSehrawat15" target="_blank"title="GitHub" >
+          <i class="fab fa-github"></i>
+        </a>
+      </a>
+      <a href="https://x.com/Pranjali1570" target="_blank"title="X" >
+        <i class="fab fa-x-twitter" style="font-size: 20px;"></i>
+      </a>
+      <a href="https://mail.google.com/" target="_blank" title="Gmail">
+        <img src="https://mailmeteor.com/logos/assets/PNG/Gmail_Logo_Black_512px.png" alt="Gmail" width="23" height="18">
+      </a>
+        <a href="https://chat.openai.com" target="_blank" title="ChatGPT">
+          <img src="https://cdn-icons-png.flaticon.com/512/11865/11865326.png" alt="ChatGPT" width="23" height="23">   </a>
+    
+          <a href="https://www.geeksforgeeks.org/" target="_blank" title="geeksforgeeks">
+            <img src="https://www.zoho.com/payroll/images/in/homepage/customer-logos/geeks-for-geeks-1x.png" alt="geeksforgeeks" width="52" height="52">   </a>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
