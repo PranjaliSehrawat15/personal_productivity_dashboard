@@ -61,6 +61,7 @@ function toggleTask(checkbox) {
                 const description = getWeatherDescription(weather.weathercode);
                 document.getElementById('weather').textContent =
                   `📍 ${city} — 🌡️ ${weather.temperature}°C | ${description}`;
+                  
               });
           });
       }, error => {
